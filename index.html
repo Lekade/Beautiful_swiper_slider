@@ -4,9 +4,121 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LoremIpsum</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Raleway:wght@400;500;600;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="logo">
+				<span class="logo__icon">
+					<img src="../img/logo.svg" alt="logo">
+				</span>
+				<div class="logo__text">Вездеход</div>
+			</div>
+			<div class="header__info">
+				<div class="header__info-decoration"></div>
+				<div class="header__info-tel">Телефон: <a href="tel:5556534">555-65-34</a> </div>
+				<div class="header__info-address">Адрес: <span>ул. Московская, 35</span></div>
+				<div class="header__info-decoration"></div>
+			</div>
+			<div class="burger"></div>
+		</header>
+		<div class="intro">
+			<div class="intro__sidebar">
+				<div class="intro__sidebar-decoration"></div>
+				<div class="social">
+					<a class="social__item" href="#" target="_blank">
+						<img src="../img/instagram.svg" alt="instagram">
+					</a>
+					<a class="social__item" href="#" target="_blank">
+						<img src="../img/vk.svg" alt="instagram">
+					</a>
+					<a class="social__item" href="#" target="_blank">
+						<img src="../img/facebook.svg" alt="instagram">
+					</a>
+					<a class="social__item" href="#" target="_blank">
+						<img src="../img/twitter.svg" alt="instagram">
+					</a>
+				</div>
+				<div class="intro__sidebar-btn"></div>
+			</div>
+			<div class="slider-container">
+				<div class="slider-text">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slider-text__slide">
+							<div class="slider-text__content">
+								<h2 class="slider-text__heading">Подбор внедорожника
+									<span>на любой</span> случай</h2>
+								<p class="slider-text__desc">
+									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
+								</p>
+								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+							</div>
+						</div>
+						<div class="swiper-slide slider-text__slide">
+							<div class="slider-text__content">
+								<h2 class="slider-text__heading">Подбор внедорожника
+									<span>на любой</span> случай</h2>
+								<p class="slider-text__desc">
+									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
+								</p>
+								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+							</div>
+						</div>
+						<div class="swiper-slide slider-text__slide">
+							<div class="slider-text__content">
+								<h2 class="slider-text__heading">Подбор внедорожника
+									<span>на любой</span> случай</h2>
+								<p class="slider-text__desc">
+									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
+								</p>
+								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-img">
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide slider-img__slide">
+							<div class="slider-img__bg" data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
+						</div>
+						<div class="swiper-slide slider-img__slide">
+							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
+						</div>
+						<div class="swiper-slide slider-img__slide">
+							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-bottom">
+					<div class="slider-social">
+						<a class="social__item" href="#" target="_blank">
+							<img src="../img/instagram.svg" alt="instagram">
+						</a>
+						<a class="social__item" href="#" target="_blank">
+							<img src="../img/vk.svg" alt="instagram">
+						</a>
+						<a class="social__item" href="#" target="_blank">
+							<img src="../img/facebook.svg" alt="instagram">
+						</a>
+						<a class="social__item" href="#" target="_blank">
+							<img src="../img/twitter.svg" alt="instagram">
+						</a>
+					</div>
+					<div class="slider-pagination"></div>
+					<div class="slider-scrollbar"></div>
+					<div class="slider-navigation"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
