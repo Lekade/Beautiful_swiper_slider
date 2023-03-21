@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>LoremIpsum</title>
+	<title>Вездеход</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Raleway:wght@400;500;600;800&family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -61,20 +61,18 @@
 						</div>
 						<div class="swiper-slide slider-text__slide">
 							<div class="slider-text__content">
-								<h2 class="slider-text__heading">Подбор внедорожника
-									<span>на любой</span> случай</h2>
+								<h2 class="slider-text__heading">Индивидуальный подход <span>к каждому</span> покупателю</h2>
 								<p class="slider-text__desc">
-									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
+									Все автомобили мы подбираем индивидуально для каждого клиента или покупателя и с трепетом относимся к результатам нашей работы.
 								</p>
 								<button class="btn slider__btn"><span>Оставить заявку</span></button>
 							</div>
 						</div>
 						<div class="swiper-slide slider-text__slide">
 							<div class="slider-text__content">
-								<h2 class="slider-text__heading">Подбор внедорожника
-									<span>на любой</span> случай</h2>
+								<h2 class="slider-text__heading">Выбор лучшей модели <span>из модельного</span>	ряда</h2>
 								<p class="slider-text__desc">
-									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
+									В нашем модельном ряду имеются модели сотен различных внедорожников, которые удовлетворят даже самого требовательного клиента.
 								</p>
 								<button class="btn slider__btn"><span>Оставить заявку</span></button>
 							</div>
@@ -88,10 +86,10 @@
 							<div class="slider-img__bg" data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
 						</div>
 						<div class="swiper-slide slider-img__slide">
-							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
+							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_02.jpg);"></div>
 						</div>
 						<div class="swiper-slide slider-img__slide">
-							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_01.jpg);"></div>
+							<div class="slider-img__bg"  data-swiper-parallax="20%" style="background-image: url(img/bg_sl_03.jpg);"></div>
 						</div>
 					</div>
 				</div>
@@ -110,15 +108,29 @@
 							<img src="../img/twitter.svg" alt="instagram">
 						</a>
 					</div>
-					<div class="slider-pagination"></div>
-					<div class="slider-scrollbar"></div>
-					<div class="slider-navigation"></div>
+					<div class="slider-pagination">
+						<div class="swiper-pagination"></div>
+					</div>
+					<div class="slider-scrollbar">
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<div class="slider-navigation">
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
 				</div>
+				<div class="slider-pagination-count">
+					<span class="current">01</span> / <span class="total"></span>
+				</div>
+				<div class="slider-pagination-current"><span class="slider-pagination-current__num">01</span><span class="slider-pagination-current__dot">.</span></div>
+				<div class="slider-gear"></div>
 			</div>
 		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

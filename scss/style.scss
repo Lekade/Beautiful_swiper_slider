@@ -141,6 +141,7 @@ $ff2: 'Raleway', sans-serif;
     justify-content: flex-end;
     align-items: center;
     background-color: $col2;
+    z-index: 10;
   }
   .intro__sidebar-decoration {
     width: 3.5rem;
@@ -210,7 +211,7 @@ $ff2: 'Raleway', sans-serif;
     bottom:0;
     width: 90rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 10;
   }
@@ -239,9 +240,6 @@ $ff2: 'Raleway', sans-serif;
     background-color: $col1;
 
   }
-  .slider-pagination {}
-  .slider-scrollbar {}
-  .slider-navigation {}
 
   .slider-img {
     width: 90rem;
@@ -270,26 +268,26 @@ $ff2: 'Raleway', sans-serif;
   }
   .slider-text {
     position: absolute;
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     height: 100%;
+
   }
   .slider-text__slide {
-    padding: 16.4rem;
-    padding-left: 33.3rem;
+    padding-right: 21.2rem;
     width: 100%;
-    height: 65rem;
+    height: 58rem;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
   }
   .slider-text__content{
-    width:66.5rem;
+    width:78rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+    z-index: 11;
   }
   .slider-text__heading{
     margin-bottom: 3.1rem;
@@ -302,6 +300,7 @@ $ff2: 'Raleway', sans-serif;
     color: #FFFFFF;
     span{
       color:$col1;
+      white-space: nowrap;
     }
   }
   .slider-text__desc{
@@ -355,6 +354,151 @@ $ff2: 'Raleway', sans-serif;
   .slider__btn{
     width: 17.6rem;
     height: 4.5rem;
+  }
+
+  .slider-pagination {
+    position: relative;
+    width:14rem;
+    height:$size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom:auto;
+  }
+
+  .swiper-pagination-bullet{
+    width: 0.6rem;
+    height: 0.6rem;
+    opacity: 1;
+    background-color: #fff;
+
+  }
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin:0.75rem;
+  }
+
+  .swiper-pagination-bullet-active{
+    background-color: $col1;
+    position: relative;
+    &::before{
+      content:'';
+      width: 1.4rem;
+      height: 1.4rem;
+      border: 0.1rem solid $col1;
+      position: absolute;
+      border-radius: 100%;
+      left: -0.4rem;
+      top: -0.4rem;
+    }
+  }
+  .slider-scrollbar {
+    flex:1 0 0;
+    position: relative;
+    height: $size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-scrollbar{
+      width: 40.3rem;
+      height:0.1rem;
+      background-color: rgba(#fff, .2);
+    }
+    .swiper-scrollbar-drag{
+      top:-0.1rem;
+      height: 0.3rem;
+      background-color: $col1;
+    }
+  }
+  .swiper-scrollbar.swiper-scrollbar-horizontal {
+    position:relative;
+  }
+  .slider-navigation {
+    position: relative;
+    padding-bottom: 0.5rem;
+    width: 14rem;
+    height: $size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-button-prev,.swiper-button-next{
+      position: relative;
+      margin-top:0;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 3.2rem;
+      height: 3.2rem;
+      color:$col1;
+      background-color:$col4;
+      border-radius: 100%;
+      border:0.2rem solid $col1;
+      top:auto;
+      left:auto;
+      right: auto;
+      bottom:auto;
+      &::after{
+        display: block;
+        font-size: 1rem;
+      }
+      &.swiper-button-disabled{
+        opacity: 1;
+        color: #8A8A8A;
+        border-color: #8A8A8A;
+      }
+    }
+    .swiper-button-prev{
+      margin-right:0.5rem;
+    }
+  }
+  .slider-gear{
+    width: 47rem;
+    height: 47rem;
+    position:absolute;
+    top:7.3rem;
+    right:7.1rem;
+    background-image: url("../img/slider-gear.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 3;
+  }
+
+  .slider-pagination-count{
+    position:absolute;
+    top: 2rem;
+    right: 3rem;
+    width: 12rem;
+    height: 8rem;
+    color: #fff;
+    font-family: $ff1;
+    font-weight: 500;
+    font-size: 2.4rem;
+    .current{
+      display: inline-block;
+      min-width:4.2rem;
+      font-size: 4rem;
+      color: #F57500;
+    }
+    .total{
+
+    }
+  }
+
+  .slider-pagination-current{
+    right: 4rem;
+    bottom: 1rem;
+    position: absolute;
+    font-size: 10rem;
+    font-family: $ff1;
+    color:transparent;
+    -webkit-text-stroke: 0.1rem #7f7f7f;
+    &__dot{
+      color:$col1;
+      -webkit-text-stroke: 0.1rem transparent;
+    }
   }
 
 
