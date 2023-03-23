@@ -48,12 +48,14 @@ $ff2: 'Raleway', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
   }
   .logo__icon {
     width:$size;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &img{
       width:3.4rem;
       height: 3.3rem;
