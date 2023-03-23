@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>Вездеход</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,13 +12,14 @@
 </head>
 <body>
 	<div class="wrapper">
+		<div class="cursor"></div>
 		<header class="header">
-			<div class="logo">
+			<a class="logo" href="#">
 				<span class="logo__icon">
 					<img src="img/logo.svg" alt="logo">
 				</span>
 				<div class="logo__text">Вездеход</div>
-			</div>
+			</a>
 			<div class="header__info">
 				<div class="header__info-decoration"></div>
 				<div class="header__info-tel">Телефон: <a href="tel:5556534">555-65-34</a> </div>
@@ -56,7 +57,7 @@
 								<p class="slider-text__desc">
 									Выберем и подберём для вас любой внедорожник в кратчайшие сроки, с учётом всех ваших пожеланий и всех необходимых потребностей.
 								</p>
-								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+								<button data-micromodal-open="modal-1" class="btn slider__btn"><span>Оставить заявку</span></button>
 							</div>
 						</div>
 						<div class="swiper-slide slider-text__slide">
@@ -65,7 +66,7 @@
 								<p class="slider-text__desc">
 									Все автомобили мы подбираем индивидуально для каждого клиента или покупателя и с трепетом относимся к результатам нашей работы.
 								</p>
-								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+								<button data-micromodal-open="modal-1" class="btn slider__btn"><span>Оставить заявку</span></button>
 							</div>
 						</div>
 						<div class="swiper-slide slider-text__slide">
@@ -74,7 +75,7 @@
 								<p class="slider-text__desc">
 									В нашем модельном ряду имеются модели сотен различных внедорожников, которые удовлетворят даже самого требовательного клиента.
 								</p>
-								<button class="btn slider__btn"><span>Оставить заявку</span></button>
+								<button data-micromodal-open="modal-1" class="btn slider__btn"><span>Оставить заявку</span></button>
 							</div>
 						</div>
 					</div>
@@ -124,10 +125,35 @@
 				<div class="slider-gear"></div>
 			</div>
 		</div>
+		<!-- [1] -->
+		<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+			<!-- [2] -->
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				<!-- [3] -->
+				<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+					<header class="modal__header">
+						<h2 class="modal__title" id="modal-1-title">Оставить заявку</h2>
+						<!-- [4] -->
+						<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+					</header>
+					<form action="#">
+						<main class="modal__content">
+							<input type="text" class="form-input modal__input" placeholder="Ваше имя...">
+							<input type="tel" class="form-input modal__input" placeholder="Ваш телефон...">
+							<textarea class="form-input modal__input" name="Message" placeholder="Сообщение..."></textarea>
+						</main>
+						<footer class="modal__footer">
+							<button class="btn form__btn"><span>Отправить</span></button>
+						</footer>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+	<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

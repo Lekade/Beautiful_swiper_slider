@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 :before,
 :after {
@@ -425,7 +426,6 @@ html {
   background-color: #F57500;
   font-weight: 800;
   font-size: 1rem;
-  line-height: 120%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   border: none;
@@ -639,6 +639,301 @@ html {
   -webkit-text-stroke: 0.1rem transparent;
 }
 
+/*----------------------------------popup------------------------------------*/
+/**************************\
+  Basic Modal Styles
+\**************************/
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__container {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 32rem;
+  max-height: 100vh;
+  border-radius: 0.4rem;
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color: #00449e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+.modal__header .modal__close:before {
+  content: "✕";
+}
+
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__btn {
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform 0.25s ease-out;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.modal__btn:focus, .modal__btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.modal__btn-primary {
+  background-color: #00449e;
+  color: #fff;
+}
+
+/*-------------------------------------------------------------------------------*/
+.modal {
+  z-index: 1000000000;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+}
+
+.modal__container {
+  width: 100%;
+  background-color: #303030;
+  border: 0.1rem solid #3f3f3f;
+  -webkit-box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.1);
+          box-shadow: 0 0 0 0.8rem rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+}
+
+.modal__title {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+}
+
+.modal__close {
+  color: #fff;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.25 ease-in;
+  transition: opacity 0.25 ease-in;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__close:before {
+  font-size: 1.5rem;
+}
+
+.form-input {
+  display: block;
+  background-color: #252525;
+  border: 0.1rem solid #373737;
+  padding: 1.2rem 1.8rem;
+  min-width: 28rem;
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-transition: border 0.25 ease-in;
+  transition: border 0.25 ease-in;
+  outline: none;
+}
+.form-input:focus {
+  border: 0.1rem solid #585858;
+}
+
+.modal__header {
+  text-align: center;
+}
+
+.modal__input {
+  margin-bottom: 0.8rem;
+}
+
+textarea.form-input {
+  min-width: 28rem;
+  height: 10rem;
+}
+
+.modal__footer {
+  text-align: center;
+}
+
+.form__btn {
+  width: 17.6rem;
+  height: 4.5rem;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@-webkit-keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes mmslideIn {
+  from {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes mmslideIn {
+  from {
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes mmslideOut {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+@keyframes mmslideOut {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden=false] .modal__overlay {
+  -webkit-animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+          animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=false] .modal__container {
+  -webkit-animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+          animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal__overlay {
+  -webkit-animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+          animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden=true] .modal__container {
+  -webkit-animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+          animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+
 /*----------------------------------@media----------------------------------------------*/
 @media (max-width: 1025px) {
   html {
@@ -649,6 +944,9 @@ html {
   }
   .slider-text__slide {
     padding-right: 14.2rem;
+  }
+  .cursor {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -703,6 +1001,7 @@ html {
     height: 59rem;
   }
   .slider-text__content {
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
     width: 100%;
   }
@@ -734,4 +1033,35 @@ html {
     width: auto;
     height: 5.8rem;
   }
+}
+/*----------------------------------cursor----------------------------------------*/
+.cursor {
+  position: absolute;
+  width: 1.7rem;
+  height: 1.7rem;
+  background-color: #F57500;
+  z-index: 10000;
+  border-radius: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  margin: -0.85rem 0 0 -0.85rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  transition: -webkit-transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  transition: transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+  transition: transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33), -webkit-transform 0.65s cubic-bezier(0.75, -1.27, 0.3, 2.33);
+}
+.cursor.active {
+  -webkit-transform: scale(3.4);
+          transform: scale(3.4);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 0.01rem solid #F57500;
+}
+.cursor.hidden {
+  -webkit-transform: scale(0.001);
+          transform: scale(0.001);
 }
